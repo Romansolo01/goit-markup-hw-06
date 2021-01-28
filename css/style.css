@@ -23,6 +23,10 @@
   --portfolio-cards-background: rgba(33, 150, 243, 0.9);
   --backdrop-color: rgba(0, 0, 0, 0.2);
   --modal-button-bc: rgba(0, 0, 0, 0.1);
+  --box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  --filter-button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 html {
@@ -935,6 +939,8 @@ body {
   line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
+  box-shadow: var(--filter-button-shadow);
+  cursor: pointer;
 }
 
 .filter-item:not(:last-child) {
@@ -1117,8 +1123,7 @@ body {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
   border-radius: 4px;
   background-color: var(--primary-background-color);
 }
