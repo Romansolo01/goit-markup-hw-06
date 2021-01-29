@@ -412,15 +412,23 @@
         </div>
         <div class="footer-subscribe">
           <h3 class="footer-subscribe-title">Подпишитесь на рассылку</h3>
-          <form>
-            <input
-              class="footer-email"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="E-mail"
-            />
-          </form>
+          <div class="button-subscribe-container">
+            <form>
+              <input
+                class="footer-email"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
+              <button class="button-subscribe" type="submit">
+                Подписаться
+              </button>
+              <svg class="subscribe-svg">
+                <use href="./images/symbol.svg#send"></use>
+              </svg>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
@@ -444,14 +452,28 @@
               id="name"
               autofocus
             />
+            <svg class="contact-icon">
+              <use href="./images/symbol.svg#person-black"></use>
+            </svg>
           </div>
           <div class="form">
-            <label class="form-label" for="tel">Телефон</label>
-            <input class="form-input" type="tel" name="tel" id="tel" />
+            <label class="form-label" for="tel-user">Телефон</label>
+            <input class="form-input" type="tel" name="tel" id="tel-user" />
+            <svg class="contact-icon">
+              <use href="./images/symbol.svg#phone-black"></use>
+            </svg>
           </div>
           <div class="form">
-            <label class="form-label" for="email">Почта</label>
-            <input class="form-input" type="email" name="email" id="email" />
+            <label class="form-label" for="email-user">Почта</label>
+            <input
+              class="form-input"
+              type="email"
+              name="email"
+              id="email-user"
+            />
+            <svg class="contact-icon">
+              <use href="./images/symbol.svg#email-black"></use>
+            </svg>
           </div>
           <div class="form">
             <label class="form-label" for="comment">Комментарий</label>
