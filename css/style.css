@@ -1311,13 +1311,41 @@ body {
   color: var(--secondary-text-color);
 }
 
+.checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/vector.svg);
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-image: url(../images/icon-check.svg);
+}
+
 .form-checkbox {
-  display: block;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
+.checkbox-contain {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
 .form-label-checkbox {
+  display: flex;
+  align-items: center;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.714;
