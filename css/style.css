@@ -917,12 +917,18 @@ body {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
+  transition: var(--transition);
 
   border: 1px solid var(--footer-email-border);
   border-radius: 4px;
 
   background-color: var(--background-top-footer);
   color: var(--footer-email);
+}
+
+.footer-email:focus {
+  border-color: var(--accent-color);
+  outline: none;
 }
 
 .button-subscribe {
@@ -1279,6 +1285,7 @@ body {
 
 .form-input:focus {
   border-color: var(--accent-color);
+  outline: none;
 }
 
 .form-textarea {
@@ -1290,6 +1297,12 @@ body {
   resize: none;
   border: 1px solid var(--border-input);
   border-radius: 4px;
+  transition: var(--transition);
+}
+
+.form-textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
 }
 
 .form-textarea::placeholder {
@@ -1319,15 +1332,24 @@ body {
 }
 
 .checkbox-icon {
-  display: inline-block;
+  display: flex;
   margin-right: 8px;
   width: 16px;
   height: 15px;
-  background-image: url(../images/vector.svg);
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+  fill: var(--primary-background-color);
+  transition: var(--transition);
+}
+
+.checkbox:hover + .checkbox-icon,
+.checkbox:focus + .checkbox-icon {
+  border-color: var(--accent-color);
 }
 
 .checkbox:checked + .checkbox-icon {
-  background-image: url(../images/icon-check.svg);
+  border: none;
+  fill: var(--accent-color);
 }
 
 .form-checkbox {
@@ -1350,6 +1372,7 @@ body {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
+  cursor: pointer;
 
   color: var(--secondary-text-color);
 }
